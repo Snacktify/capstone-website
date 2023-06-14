@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homepage</title>
   <link rel="stylesheet" href="homepage.css">
 </head>
+
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="landing.html">Home</a></li>
-        <li><a href="homepage.html">Homepage</a></li>
-      </ul>
-    </nav>
+    <h1>Hi User</h1>
+    <h1>Selamat datang di Snacktify</h1>
   </header>
 
-  <section class="homepage-section">
-    <h1>Welcome to the Homepage!</h1>
-    <p>This is the homepage of the website.</p>
-  </section>
+  <main>
+    <div class="box" onclick="location.href='pages/box1.html';">
+      <h2>SnackCheck</h2>
+      <p>Scan makanan yang ingin kamu ketahui</p>
+    </div>
 
-  <script src="script.js"></script>
+    <div class="box" onclick="location.href='pages/box2.html';">
+      <h2>SnackVidia</h2>
+      <p>Cari makanan yang ingin kamu cari</p>
+    </div>
+
+    <div class="box" onclick="location.href='pages/box3.html';">
+      <h2>Profile</h2>
+      <p>Tambahkan data kamu disini</p>
+    </div>
+
+    <div class="box" onclick="location.href='../../landing.html';">
+      <h2>Logout</h2>
+      <p>Klik disini jika kamu ingin kembali login</p>
+    </div>
+  </main>
 </body>
+
 </html>
