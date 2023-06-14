@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.landing-section,
+.homepage-section {
+    text-align: center;
+    padding: 50px;
+}
+
+.landing-section h1,
+.homepage-section h1 {
+    color: #333;
+}
+
+.landing-section p,
+.homepage-section p {
+    color: #666;
+}
