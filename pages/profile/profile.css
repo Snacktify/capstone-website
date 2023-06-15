@@ -1,30 +1,94 @@
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    max-width: 400px;
 }
 
 h1 {
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-form {
-    margin-bottom: 20px;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-label {
-    display: inline-block;
-    width: 120px;
-    margin-bottom: 10px;
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
 }
 
-input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#profileForm {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0;
+}
+
+input {
+    padding: 10px;
+    padding-left: 20px;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    height: 30px;
+}
+
+input:focus {
+    outline: none;
+    border: 3px solid #74ad92;
+}
+
+#submit-button {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    background-color: #74ad92;
+    color: #fff;
     border: none;
+    border-radius: 50px;
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
-    background-color: #45a049;
+#submit-button a {
+    color: #ffffff;
+    text-decoration: none;
 }
+
+#submit-button:hover {
+    background-color: #76BA99;
+}
+
+#back-button {
+    background-color: #ffffff;
+    color: #76BA99;
+    border-radius: 5px;
+    border-color: #ffffff00;
+    cursor: pointer;
+    padding: 5px;
+    font-size: larger;
+    width: 100%;
+}
+
+#back-button a{
+    text-decoration: none;
+    color: #76BA99;
+}
+
+#back-button:hover {
+    background-color: #76BA99;
+    color: #ffffff;
+}
+

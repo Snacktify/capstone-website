@@ -1,8 +1,8 @@
-// Mengambil nama snack dari parameter URL
+// Get the snack name from the URL parameter
 const urlParams = new URLSearchParams(window.location.search);
 const namaSnack = urlParams.get('namaSnack');
 
-// Mengambil informasi lengkap makanan dari API berdasarkan nama snack
+// Retrieving complete snack information from the API based on the snack name
 fetch(`http://34.128.89.110:8080/snackvidia/${namaSnack}`, {
     method: 'GET',
     headers: {
@@ -13,7 +13,7 @@ fetch(`http://34.128.89.110:8080/snackvidia/${namaSnack}`, {
     .then(data => {
         const detailMakanan = document.getElementById('detail-makanan');
         
-        // Membuat elemen untuk menampilkan informasi makanan
+        // Create an element to display snack information
         const namaMakanan = document.createElement('h2');
         namaMakanan.textContent = data.nama_snack;
         detailMakanan.appendChild(namaMakanan);
@@ -21,6 +21,14 @@ fetch(`http://34.128.89.110:8080/snackvidia/${namaSnack}`, {
         const deskripsiMakanan = document.createElement('p');
         deskripsiMakanan.textContent = data.deskripsi;
         detailMakanan.appendChild(deskripsiMakanan);
+
+        const ratingMakanan = document.createElement('p');
+        ratingMakanan.textContent = `Rating: ${data.rating}`;
+        detailMakanan.appendChild(ratingMakanan);
+
+        const asalDaerahMakanan = document.createElement('p');
+        asalDaerahMakanan.textContent = `Asal Daerah: ${data.asal_daerah}`;
+        detailMakanan.appendChild(asalDaerahMakanan);
 
         const hargaMakanan = document.createElement('p');
         hargaMakanan.textContent = `Harga: ${data.harga}`;

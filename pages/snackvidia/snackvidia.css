@@ -1,19 +1,61 @@
-/* Gaya CSS untuk tampilan */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
     text-align: center;
+    color: #76BA99;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+#daftar-snack {
+    list-style: none;
+    padding: 20;
+    margin: 0;
+    width: 90%;
+    padding-inline-start: 0;
 }
 
-li {
-    margin-bottom: 10px;
+#daftar-snack li {
+    background-color: #76BA99;
+    color: white;
+    border-radius: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#daftar-snack li:hover {
+    background-color: #5C9477;
+}
+
+#back-button {
+    background-color: #ffffff;
+    color: #76BA99;
+    border-radius: 5px;
+    border-color: #ffffff00;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    font-size: larger;
+    margin-top: 30px;
+}
+
+#back-button a{
+    text-decoration: none;
+    color: #76BA99;
+}
+
+#back-button:hover {
+    background-color: #76BA99;
+    color: white;
 }

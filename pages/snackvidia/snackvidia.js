@@ -1,9 +1,9 @@
-// Fungsi untuk menavigasikan ke halaman detail makanan
+// Function to navigate to the snack detail page
 function navigateToDetail(namaSnack) {
     window.location.href = "../detail/detail.html?namaSnack=" + encodeURIComponent(namaSnack);
 }
 
-// Mendapatkan daftar makanan dari API
+// Gets a list of snacks from the API
 fetch('http://34.128.89.110:8080/snackvidia', {
     method: 'GET',
     headers: {
@@ -12,7 +12,7 @@ fetch('http://34.128.89.110:8080/snackvidia', {
 })
     .then(response => response.json())
     .then(data => {
-        const daftarMakanan = document.getElementById('daftar-makanan');
+        const daftarMakanan = document.getElementById('daftar-snack');
         
         data.forEach(makanan => {
             const li = document.createElement('li');
