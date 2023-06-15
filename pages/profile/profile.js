@@ -11,9 +11,11 @@ profileForm.addEventListener('submit', (event) => {
     const formData = {
         full_name: fullName,
         username: username,
-        new_email: newEmail,
+        email: newEmail,
         phone_number: phoneNumber
     };
+
+    console.log(formData);
 
     fetch('http://34.128.89.110:8080/update-profile', {
         method: 'PUT',
