@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const removeButton = document.getElementById('remove-button');
     const checkButton = document.getElementById('check-button');
     const resultBox = document.getElementById('result-box');
+    
 
     fileInput.addEventListener('change', function () {
         const file = fileInput.files[0];
@@ -57,6 +58,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                         fetch('http://localhost:8080/predict2_image', {
                             method: 'POST',
+                            headers: {
+                                'Authorization': `Bearer ${sessionStorage.getItem('access_token')}`
+                            },
                             body: formData,
                         })
                             .then(response => {
@@ -150,8 +154,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const formData = new FormData();
         formData.append('uploaded_file', file);
 
+        console.log(localStorage.getItem('access_token'));
+
         fetch('http://localhost:8080/predict2_image', {
             method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('access_token')}`
+            },
             body: formData,
         })
             .then(response => {
