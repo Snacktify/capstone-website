@@ -23,11 +23,11 @@ header h1 {
     margin-bottom: 0;
 }
 
-#detail-makanan {
+#detail-snack {
     width: 90%;
 }
 
-#detail-makanan h2 {
+#detail-snack h2 {
     font-size: 30px;
     font-weight: bold;
     color: #76BA99;
@@ -35,7 +35,7 @@ header h1 {
     margin-bottom: 10px;
 }
 
-#detail-makanan p {
+#detail-snack p {
     font-size: 18px;
     margin-bottom: 10px;
     border: #76BA99;

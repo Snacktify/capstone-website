@@ -11,28 +11,28 @@ fetch(`http://34.128.89.110:8080/snackvidia/${namaSnack}`, {
 })
     .then(response => response.json())
     .then(data => {
-        const detailMakanan = document.getElementById('detail-makanan');
+        const detailSnack = document.getElementById('detail-snack');
         
         // Create an element to display snack information
-        const namaMakanan = document.createElement('h2');
-        namaMakanan.textContent = data.nama_snack;
-        detailMakanan.appendChild(namaMakanan);
+        const namaSnack = document.createElement('h2');
+        namaSnack.textContent = data.nama_snack;
+        detailSnack.appendChild(namaSnack);
 
-        const deskripsiMakanan = document.createElement('p');
-        deskripsiMakanan.textContent = data.deskripsi;
-        detailMakanan.appendChild(deskripsiMakanan);
+        const deskripsiSnack = document.createElement('p');
+        deskripsiSnack.textContent = data.deskripsi;
+        detailSnack.appendChild(deskripsiSnack);
 
-        const ratingMakanan = document.createElement('p');
-        ratingMakanan.textContent = `Rating: ${data.rating}`;
-        detailMakanan.appendChild(ratingMakanan);
+        const ratingSnack = document.createElement('p');
+        ratingSnack.textContent = `Rating: ${data.rating}`;
+        detailSnack.appendChild(ratingSnack);
 
-        const asalDaerahMakanan = document.createElement('p');
-        asalDaerahMakanan.textContent = `Asal Daerah: ${data.asal_daerah}`;
-        detailMakanan.appendChild(asalDaerahMakanan);
+        const asalDaerahSnack = document.createElement('p');
+        asalDaerahSnack.textContent = `Asal Daerah: ${data.asal_daerah}`;
+        detailSnack.appendChild(asalDaerahSnack);
 
-        const hargaMakanan = document.createElement('p');
-        hargaMakanan.textContent = `Harga: ${data.harga}`;
-        detailMakanan.appendChild(hargaMakanan);
+        const hargaSnack = document.createElement('p');
+        hargaSnack.textContent = `Harga: ${data.harga}`;
+        detailSnack.appendChild(hargaSnack);
     })
     .catch(error => {
         console.error('Terjadi kesalahan:', error);
