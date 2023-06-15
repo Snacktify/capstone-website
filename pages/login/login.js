@@ -15,24 +15,8 @@ loginForm.addEventListener('submit', function(event) {
         password: password
     };
 
-    function getCookie(cname) {
-        let name = cname + "=";
-        let decodedCookie = decodeURIComponent(document.cookie);
-        let ca = decodedCookie.split(';');
-        for(let i = 0; i <ca.length; i++) {
-          let c = ca[i];
-          while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-          }
-          if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-          }
-        }
-        return "";
-      }
-
     // Mengirim data login ke endpoint
-    fetch('http://localhost:8080/login', {
+    fetch('http://34.128.89.110:8080/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -41,24 +25,19 @@ loginForm.addEventListener('submit', function(event) {
     })
     .then(response => {
         if (response.ok) {
-            // Menyimpan access token ke sessionStorage
-            const setCookieHeader = response.headers.get('Set-Cookie');
-            console.log(setCookieHeader);
-            console.log(getCookie('access_token'))
-            if (setCookieHeader) {
-                setCookieHeader.split(';').forEach(cookie => {
-                    if (cookie.includes('access_token')) {
-                        const accessToken = cookie.split('=')[1];
-                        localStorage.setItem('access_token', accessToken);
-                    }
-                });
-            }
-            // Login berhasil, redirect ke halaman dashboard atau tampilkan pesan sukses
-            
+            // Login berhasil, redirect ke halaman home
+            return response.json();
         } else {
             // Login gagal, tampilkan pesan error
             throw new Error('Login gagal');
         }
+    })
+    .then(data => {
+        // Menyimpan access token ke session storage
+        const accessToken = data.token;
+        localStorage.setItem('access_token', accessToken);
+        // Redirect ke halaman home
+        window.location.href = '../../../pages/homepage/homepage.html';
     })
     .catch(error => {
         console.error('Terjadi kesalahan:', error);

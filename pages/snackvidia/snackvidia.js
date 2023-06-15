@@ -4,7 +4,12 @@ function navigateToDetail(namaSnack) {
 }
 
 // Mendapatkan daftar makanan dari API
-fetch('http://localhost:8080/snackvidia')
+fetch('http://34.128.89.110:8080/snackvidia', {
+    method: 'GET',
+    headers: {
+        'Authorization': `Bearer ${localStorage.getItem('access_token')}`
+    }
+})
     .then(response => response.json())
     .then(data => {
         const daftarMakanan = document.getElementById('daftar-makanan');

@@ -50,16 +50,20 @@ document.addEventListener('DOMContentLoaded', function () {
                         videoElement.remove();
 
                         removeButton.style.display = 'block'; // Menampilkan tombol "Hapus Foto"
-
+                        document.getElementById("file-input").style.display = "none";
+                        document.getElementById("camera-input").style.display = "none";
+                        document.getElementById("check-button").style.display = "none";
+                        document.getElementById("reset-button").style.display = "block";
+                        document.getElementById("view-more").style.display = "block";
                         // Mengirim gambar ke endpoint /predict2_image
                         const fileData = dataURLtoFile(imageURL, 'captured_image.jpg');
                         const formData = new FormData();
                         formData.append('uploaded_file', fileData);
 
-                        fetch('http://localhost:8080/predict2_image', {
+                        fetch('http://34.128.89.110:8080/predict_image', {
                             method: 'POST',
                             headers: {
-                                'Authorization': `Bearer ${sessionStorage.getItem('access_token')}`
+                                'Authorization': `Bearer ${localStorage.getItem('access_token')}`
                             },
                             body: formData,
                         })
@@ -148,15 +152,13 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("reset-button").style.display = "block";
         document.getElementById("view-more").style.display = "block";
 
-        
 
         const file = fileInput.files[0];
         const formData = new FormData();
         formData.append('uploaded_file', file);
+      
 
-        console.log(localStorage.getItem('access_token'));
-
-        fetch('http://localhost:8080/predict2_image', {
+        fetch('http://34.128.89.110:8080/predict_image', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('access_token')}`

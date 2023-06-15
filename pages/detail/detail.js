@@ -3,7 +3,12 @@ const urlParams = new URLSearchParams(window.location.search);
 const namaSnack = urlParams.get('namaSnack');
 
 // Mengambil informasi lengkap makanan dari API berdasarkan nama snack
-fetch(`http://localhost:8080/snackvidia/${namaSnack}`)
+fetch(`http://34.128.89.110:8080/snackvidia/${namaSnack}`, {
+    method: 'GET',
+    headers: {
+        'Authorization': `Bearer ${localStorage.getItem('access_token')}`
+    }
+})
     .then(response => response.json())
     .then(data => {
         const detailMakanan = document.getElementById('detail-makanan');

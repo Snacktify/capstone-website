@@ -18,7 +18,7 @@ registerForm.addEventListener('submit', function(event) {
     };
 
     // Mengirim data registrasi ke endpoint
-    fetch('http://localhost:8080/register', {
+    fetch('http://34.128.89.110:8080/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
