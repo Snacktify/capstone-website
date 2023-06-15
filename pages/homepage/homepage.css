@@ -3,7 +3,7 @@ body {
     background-color: #ffffff;
     margin: 0;
     padding: 0;
-    max-width: 480px;
+    max-width: 400px;
 }
 
 header {
@@ -17,6 +17,12 @@ header h1 {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 25px;
+}
+
+header h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
 }
 
 .box {

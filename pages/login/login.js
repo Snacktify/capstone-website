@@ -37,7 +37,7 @@ loginForm.addEventListener('submit', function(event) {
         const accessToken = data.token;
         localStorage.setItem('access_token', accessToken);
         // Redirect ke halaman home
-        window.location.href = '../../../pages/homepage/homepage.html';
+        window.location.href = '../../pages/homepage/homepage.html';
     })
     .catch(error => {
         console.error('Terjadi kesalahan:', error);

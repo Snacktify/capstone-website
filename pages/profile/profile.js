@@ -3,16 +3,16 @@ const profileForm = document.getElementById('profileForm');
 profileForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const full_name = document.getElementById('full_name').value;
+    const fullName = document.getElementById('full_name').value;
     const username = document.getElementById('username').value;
-    const new_email = document.getElementById('new_email').value;
-    const phone_number = document.getElementById('phone_number').value;
+    const newEmail = document.getElementById('new_email').value;
+    const phoneNumber = document.getElementById('phone_number').value;
 
     const formData = {
-        full_name: full_name,
+        full_name: fullName,
         username: username,
-        new_email: new_email,
-        phone_number: phone_number
+        new_email: newEmail,
+        phone_number: phoneNumber
     };
 
     fetch('http://34.128.89.110:8080/update-profile', {

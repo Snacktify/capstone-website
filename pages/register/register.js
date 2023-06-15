@@ -28,7 +28,7 @@ registerForm.addEventListener('submit', function(event) {
     .then(response => {
         if (response.ok) {
             // Registrasi berhasil, redirect ke halaman login atau tampilkan pesan sukses
-            window.location.href = "../../../pages/login/login.html";
+            window.location.href = "../../pages/login/login.html";
         } else {
             // Registrasi gagal, tampilkan pesan error
             throw new Error('Registrasi gagal');

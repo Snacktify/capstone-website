@@ -9,27 +9,35 @@
 <body>
   <h1>SnackCheck</h1>
 
-  <div id="file-input" class="file-input">
-    <label for="file">Attach File:</label>
-    <input type="file" id="file" accept="image/*">
-  </div>
-
-  <div id="camera-input" class="camera-input">
-    <button id="camera-button">Take Photo</button>
-    <button id="remove-button" style="display: none;">Hapus Foto</button>
+  <div class="container">
+    <div class="container-checkbox">
+      <input type="checkbox" id="use-camera" />
+      <label for="use-camera">Use Camera</label>
+    </div>
+  
+    <div class="container-input">
+      <div id="file-input" class="file-input">
+        <input type="file" id="file" accept="image/*">
+      </div>
+    
+      <div id="camera-input" class="camera-input">
+        
+        <button id="camera-button" disabled>Take Photo</button>
+      </div>
+    </div>
   </div>
 
   <div id="image-preview"></div>
-
-  <button id="check-button">Check Snack</button>
-
-  <button id="reset-button" style="display: none;"><a href="snackcheck.html">Reset</a>></button>
-
+  <button id="check-button" style="display: none;">Check Snack</button>
+  
   <div id="result-box"></div>
 
-  <button id="view-more" style="display: none;">View More</button>
-
-  <button id="back-button"><a href="../homepage/homepage.html">Back Button</a></button>
+  <div class="container-view">
+    <button id="reset-button" style="display: none;">Reset</button>
+    <button id="view-more" style="display: none;">View More</button>
+  </div>
+  
+  <button id="back-button">back to homepage</button>
 
   <script src="snackcheck.js"></script>
 </body>
