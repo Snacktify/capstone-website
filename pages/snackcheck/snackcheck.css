@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+    max-width: 480px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.file-input,
+.camera-input,
+#image-preview,
+#result-box {
+    margin-bottom: 10px;
+    max-width: 90%;
+}
+
+#image-preview img {
+    max-width: 100%;
+    height: auto;
+    
+}
