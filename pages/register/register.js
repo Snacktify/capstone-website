@@ -18,7 +18,7 @@ registerForm.addEventListener('submit', function(event) {
     };
 
     // Mengirim data registrasi ke endpoint
-    fetch('http://34.128.89.110:8080/register', {
+    fetch('https://api-service-dot-snacktify-capstone-project.et.r.appspot.com/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

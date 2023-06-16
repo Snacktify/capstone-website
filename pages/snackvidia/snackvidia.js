@@ -4,7 +4,7 @@ function navigateToDetail(namaSnack) {
 }
 
 // Gets a list of snacks from the API
-fetch('http://34.128.89.110:8080/snackvidia', {
+fetch('https://api-service-dot-snacktify-capstone-project.et.r.appspot.com/snackvidia', {
     method: 'GET',
     headers: {
         'Authorization': `Bearer ${localStorage.getItem('access_token')}`

@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const namaSnack = urlParams.get('namaSnack');
 
 // Retrieving complete snack information from the API based on the snack name
-fetch(`http://34.128.89.110:8080/snackvidia/${namaSnack}`, {
+fetch(`https://api-service-dot-snacktify-capstone-project.et.r.appspot.com/snackvidia/${namaSnack}`, {
     method: 'GET',
     headers: {
         'Authorization': `Bearer ${localStorage.getItem('access_token')}`

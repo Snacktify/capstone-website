@@ -16,7 +16,7 @@ loginForm.addEventListener('submit', function(event) {
     };
 
     // Mengirim data login ke endpoint
-    fetch('http://34.128.89.110:8080/login', {
+    fetch('https://api-service-dot-snacktify-capstone-project.et.r.appspot.com/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

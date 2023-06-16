@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // integration with API
     function fetchImagePrediction(formData) {
-        fetch('http://34.128.89.110:8080/predict_image', {
+        fetch('https://api-service-dot-snacktify-capstone-project.et.r.appspot.com/predict_image', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('access_token')}`

@@ -17,7 +17,7 @@ profileForm.addEventListener('submit', (event) => {
 
     console.log(formData);
 
-    fetch('http://34.128.89.110:8080/update-profile', {
+    fetch('https://api-service-dot-snacktify-capstone-project.et.r.appspot.com/update-profile', {
         method: 'PUT',
         headers: {
             'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
