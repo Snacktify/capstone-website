@@ -20,7 +20,8 @@ profileForm.addEventListener('submit', (event) => {
     fetch('http://34.128.89.110:8080/update-profile', {
         method: 'PUT',
         headers: {
-            'Authorization': `Bearer ${localStorage.getItem('access_token')}`
+            'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify(formData)
     })
