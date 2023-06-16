@@ -7,5 +7,5 @@ handlers:
   static_files: \1
   upload: (.*\.(html|css|js))$
 - url: /.*
-  static_files: index.html
+  static_files: Landing.html
   upload: Landing.html
