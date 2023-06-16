@@ -37,6 +37,14 @@ fetch(`https://api-service-dot-snacktify-capstone-project.et.r.appspot.com/snack
         const hargaSnack = document.createElement('p');
         hargaSnack.textContent = `Harga: ${data.harga}`;
         detailSnack.appendChild(hargaSnack);
+
+        const nutrisiSnack = document.createElement('p');
+        nutrisiSnack.textContent = `Nutrisi: ${data.nutrition}`;
+        detailSnack.appendChild(nutrisiSnack);
+
+        const resepSnack = document.createElement('p');
+        resepSnack.textContent = `Resep: ${data.recipe}`;
+        detailSnack.appendChild(resepSnack);
     })
     .catch(error => {
         console.error('Terjadi kesalahan:', error);
