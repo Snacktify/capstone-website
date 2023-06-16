@@ -25,6 +25,9 @@ header h1 {
 
 #detail-snack {
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #detail-snack h2 {
@@ -36,7 +39,7 @@ header h1 {
 }
 
 #detail-snack img {
-    width: 200px;
+    width: 300px;
     height: auto;
 }
 
@@ -48,6 +51,7 @@ header h1 {
     border-width: 1px;
     border-radius: 5px;
     padding: 10px;
+    width: inherit;
 }
 
 #back-button {
