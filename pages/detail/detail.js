@@ -19,7 +19,7 @@ fetch(`https://api-service-dot-snacktify-capstone-project.et.r.appspot.com/snack
         detailSnack.appendChild(namaSnack);
 
         const imageElement = document.createElement('img');
-        imageElement.src = data.image_url;
+        imageElement.src = data.link_gambar;
         detailSnack.appendChild(imageElement);
 
         const deskripsiSnack = document.createElement('p');
